@@ -33,3 +33,15 @@ while True:
             print("You used your teeth to cut grass and earned $1!")
         else:
             print("You don't have any tools to cut grass with!")
+    # buying scissors
+    elif action == "buy tool":
+        tool_to_buy = input("Which tool do you want to buy? ").lower()
+        if tool_to_buy in tools_prices:
+            if money >= tools_prices[tool_to_buy]:
+                money -= tools_prices[tool_to_buy]
+                tools.append(tool_to_buy)
+                print(f"You bought {tool_to_buy} for ${tools_prices[tool_to_buy]}!")
+            else:
+                print("You don't have enough money to buy this tool.")
+        else:
+            print("Invalid tool.")
