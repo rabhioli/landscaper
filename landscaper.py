@@ -25,3 +25,11 @@ def display_status():
 while True:
     display_status()
     action = input("\nWhat do you want to do? (cut grass/buy tool/quit): ").lower()
+
+    # cutting grass with teeth
+    if action == "cut grass":
+        if "teeth" in tools:
+            money += earnings["teeth"]
+            print("You used your teeth to cut grass and earned $1!")
+        else:
+            print("You don't have any tools to cut grass with!")
