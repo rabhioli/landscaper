@@ -139,3 +139,7 @@ while True:
             print("You hired a team of starving students to cut grass and earned $250!")
         else:
             print("You don't have any tools to cut grass with!")
+    # the win scenario
+    if money >= win_amount and "team of starving students" in tools:
+        print("\nCongratulations! You've won the game!")
+        break
