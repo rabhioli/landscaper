@@ -45,3 +45,13 @@ while True:
                 print("You don't have enough money to buy this tool.")
         else:
             print("Invalid tool.")
+    # cutting grass with scissors
+    elif action == "cut grass":
+        if "teeth" in tools:
+            money += earnings["teeth"]
+            print("You used your teeth to cut grass and earned $1!")
+        elif "scissors" in tools:
+            money += earnings["scissors"]
+            print("You used scissors to cut grass and earned $5!")
+        else:
+            print("You don't have any tools to cut grass with!")
