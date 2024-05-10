@@ -108,7 +108,7 @@ while True:
             print("You used battery-powered lawnmower to cut grass and earned $100!")
         else:
             print("You don't have any tools to cut grass with!")
-    # Implement hiring team of starving students
+    # hiring team of starving students
     elif action == "buy tool":
         tool_to_buy = input("Which tool do you want to buy? ").lower()
         if tool_to_buy == "team of starving students":
@@ -120,3 +120,22 @@ while True:
                 print("You don't have enough money to hire a team.")
         else:
             print("Invalid tool.")
+    # cutting grass with team of starving students and win scenario
+    elif action == "cut grass":
+        if "teeth" in tools:
+            money += earnings["teeth"]
+            print("You used your teeth to cut grass and earned $1!")
+        elif "scissors" in tools:
+            money += earnings["scissors"]
+            print("You used scissors to cut grass and earned $5!")
+        elif "push lawnmower" in tools:
+            money += earnings["push lawnmower"]
+            print("You used push lawnmower to cut grass and earned $50!")
+        elif "battery-powered lawnmower" in tools:
+            money += earnings["battery-powered lawnmower"]
+            print("You used battery-powered lawnmower to cut grass and earned $100!")
+        elif "team of starving students" in tools:
+            money += earnings["team of starving students"]
+            print("You hired a team of starving students to cut grass and earned $250!")
+        else:
+            print("You don't have any tools to cut grass with!")
